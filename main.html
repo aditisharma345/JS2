@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="Second.js"></script>
+    </head>
+<body>
+    <!-- /* comparisons */ -->
+<h2>JS Comparisons</h2>
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="20" />
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let voteable;
+  let age = Number(document.getElementById("age").value);
+  if (isNaN(age)) {
+    voteable = "Input is not a number";
+  } else {
+    voteable = (age < 20) ? "Too young" : "Old enough";
+  }
+  document.getElementById("demo").innerHTML = voteable + " to vote";
+}
+</script>
+
+</body>
+</html>
